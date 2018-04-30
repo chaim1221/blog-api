@@ -17,5 +17,8 @@
     "nodemon": "^1.17.3",
     "request": "^2.85.0",
     "should": "^13.2.1"
+  },
+  "dependencies": {
+    "sqlite3": "^4.0.0"
   }
 }
