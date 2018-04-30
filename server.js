@@ -21,4 +21,9 @@ app.use('/api', router);
 app.listen(port);
 console.log('Listening on port ' + port);
 
-databaseTest.dispose();
+// should be undefined
+var getPost = databaseTest
+  .read("posts", "title", "hello world")
+  .then(post => {
+    console.log(post);
+  });
