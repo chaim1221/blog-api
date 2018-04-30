@@ -17,7 +17,8 @@ router.get('/', function(request, response) {
     response.json({ message: 'test successful (200)' });
 });
 
-
 app.use('/api', router);
 app.listen(port);
 console.log('Listening on port ' + port);
+
+databaseTest.dispose();
