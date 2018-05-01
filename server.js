@@ -23,7 +23,7 @@ router.route('/')
 
 // should be undefined
 var getPost = databaseTest
-  .read("posts", "title", "hello world")
+  .read("posts", "title", "hai")
   .then(post => {
     console.log(post);
   });
