@@ -1,4 +1,4 @@
-![alt text](https://travis-ci.com/images/logos/Tessa-pride-4.png) [![Build Status](https://travis-ci.org/chaim1221/blog-api.svg?branch=master)](https://travis-ci.org/chaim1221/blog-api)
+![alt text](https://travis-ci.com/images/logos/Tessa-pride-4.png =128x128) [![Build Status](https://travis-ci.org/chaim1221/blog-api.svg?branch=master)](https://travis-ci.org/chaim1221/blog-api)
 
 [![GitHub version](https://badge.fury.io/gh/chaim1221%2Fblog-api.svg)](https://badge.fury.io/gh/chaim1221%2Fblog-api)
 
