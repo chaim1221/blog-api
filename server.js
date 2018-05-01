@@ -21,7 +21,7 @@ router.route('/')
     response.json({ message: 'test successful (200)' });
 });
 
-// should be undefined
+// pre-seeded
 var getPost = databaseTest
   .read("posts", "title", "hai")
   .then(post => {
