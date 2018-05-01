@@ -8,7 +8,7 @@
 [Chaim Eliyah](https://github.com/chaim1221)
 
 #### what
-This is a blog API in NodeJS deployed to AWS using Travis CI. It is being written as part of a coding challenge handed off by a recruiter.  
+This is a blog API in NodeJS deployed to Azure Container Registry using Travis CI. It is being written as part of a coding challenge handed off by a recruiter.  
 
 #### when
 April-May 2018, late at night.
@@ -22,7 +22,7 @@ Because we like you.
 If you fire up Postman, `blog-api.postman_collection.json` will keep you posted.  
 If you're into Docker, try  
 ```
-docker build -t blogapi.azurecr.io/blog-api .
+docker build -t blogapi.azurecr.io/blog-api:{version} .
 docker run -d -p 8080:80 blog-api # works with Postman; 80:80 in prod
 ```
 
@@ -41,13 +41,13 @@ az acr login --name blogapi
 #### deploying
 ```
 # if not run during "how":
-docker build -t blogapi.azurecr.io/blog-api .
+docker build -t blogapi.azurecr.io/blog-api:{version} .
 # be careful not to overwrite existing versions:
 docker push blogapi.azurecr.io/blog-api:{version}
 # see the tag you pushed:
 az acr repository show-tags --name blogapi --repository blog-api --output table
 ```
---this should resuld in seeing the tag equal to `{version}` (e.g., `v1`).
+--this should resuld in seeing the tag equal to `{version}` (e.g., `v2`).
 
 Why stop there?
 ```
