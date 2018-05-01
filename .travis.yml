@@ -6,7 +6,7 @@ services: docker
 
 env:
   global:
-    - FROM_TAG=d830759c8309669ebc68f915a380e7b76781ef21
+    - FROMTAG=d830759c8309669ebc68f915a380e7b76781ef21
 
 after_success:
   - docker build -t blogapi.azurecr.io/blog-api .
