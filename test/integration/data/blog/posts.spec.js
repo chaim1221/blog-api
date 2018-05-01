@@ -37,11 +37,11 @@ describe('When we want to keep track of blog posts', function () {
         done();
       });
     });
-    // it('Can remove blog posts', function (done) {
-    //   postsRepository.remove(post.post_id).then(function (rowsAffected) {
-    //     assert.equal(rowsAffected, 1);
-    //     done();
-    //   });
-    // });
+    it('Can remove blog posts', function (done) {
+      postsRepository.remove(post.post_id).then(function (rowsAffected) {
+        assert.equal(rowsAffected, 1);
+        done();
+      });
+    });
   });
 });
