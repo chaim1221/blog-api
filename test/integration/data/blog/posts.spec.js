@@ -26,11 +26,22 @@ describe('When we want to keep track of blog posts', function () {
         done();
       });
     });
-    it('Can remove blog posts', function (done) {
-      postsRepository.remove(post.post_id).then(function (rowsAffected) {
-        assert.equal(rowsAffected, 1);
+    it('Can update blog posts', function (done) {
+      post.body = "\nHow are you?\n\nOkay, thank you, goodbye.\n";
+      postsRepository.saveChanges(post).then(function (rowsAffected) {
+        postsRepository.findById(post.post_id).then(function (result) {
+          assert.equal(result.post_id, post.post_id);
+          assert.equal(result.title, post.title);
+          assert.equal(result.body, post.body);
+        });
         done();
       });
     });
+    // it('Can remove blog posts', function (done) {
+    //   postsRepository.remove(post.post_id).then(function (rowsAffected) {
+    //     assert.equal(rowsAffected, 1);
+    //     done();
+    //   });
+    // });
   });
 });

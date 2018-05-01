@@ -39,7 +39,7 @@ module.exports = {
     }, 
     update: function(table, data) {
         return knex(table)
-            .where({ post_id: parseInt(data.id) })
+            .where({ post_id: parseInt(data.post_id) })
 // PG       .returning('id')
             .update(data);
     },
