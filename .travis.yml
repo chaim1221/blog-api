@@ -4,12 +4,20 @@ node_js: "9"
 
 services: docker
 
+env:
+  global:
+    - FROMTAG=d830759c8309669ebc68f915a380e7b76781ef21
+
 after_success:
   - docker build -t blogapi.azurecr.io/blog-api .
   - docker run -d -p 80:80 blog-api
   - docker ps -a
   - wget --retry-connrefused --waitretry=1 http://127.0.0.1:80
+  - tar -xzvf deploy.tar.gz
 
-#deploy:
-  # deploying via Azure CLI; don't have it working in Travis yet
-  # docker tag blog-api ndlon.azurecr.io/blog-api:v1
+deploy:
+  - provider: script
+    on:
+      branch: master
+    script: bash deploy.sh
+    
