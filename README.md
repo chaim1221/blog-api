@@ -1,6 +1,6 @@
-<img src="https://travis-ci.com/images/logos/Tessa-pride-4.png" width=32 height=32 /> [![Build Status](https://travis-ci.org/chaim1221/blog-api.svg?branch=master)](https://travis-ci.org/chaim1221/blog-api) <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" width=32 height=32 /> [![GitHub version](https://badge.fury.io/gh/chaim1221%2Fblog-api.svg)](https://badge.fury.io/gh/chaim1221%2Fblog-api)  
+<img src="https://travis-ci.com/images/logos/Tessa-pride-4.png" width=32 height=32 /> [![Build Status](https://travis-ci.org/chaim1221/blog-api.svg?branch=master)](https://travis-ci.org/chaim1221/blog-api) &nbsp;&npsp;&nbsp;&npsp; <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" width=32 height=32 /> [![GitHub version](https://badge.fury.io/gh/chaim1221%2Fblog-api.svg)](https://badge.fury.io/gh/chaim1221%2Fblog-api)  
 
-<img src="https://i1.wp.com/buildazure.com/wp-content/uploads/2017/09/Azure.png?w=519&ssl=1" width=32 height=32 /> [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+<img src="https://i1.wp.com/buildazure.com/wp-content/uploads/2017/09/Azure.png?w=519&ssl=1" width=32 height=32 /> [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://github.com/chaim1221/blog-api#deploying)
 
 #### Blog API
 
@@ -30,7 +30,7 @@ docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 8080:8080 
 az acr login --name={username}
 docker push ndlon.azurecr.io/blog-api:v1
 az container create --resource-group blog-api --name blog-api --image ndlon.azurecr.io/blog-api
-az container show --resource-group ndlon --name blog-api --query instanceView.state
+az container show --resource-group ndlon-website --name blog-api --query instanceView.state
 ```
 
 TODO: Get the Azure CLI working in Travis....
