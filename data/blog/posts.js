@@ -6,7 +6,7 @@ function PostsRepository() {
   var blogRepository = new BlogRepository('blog', 'posts');
 
   blogRepository.findByTitle = function (title) {
-    return blogRepository.find('posts', title);
+    return blogRepository.find('title', title);
   }
 
   return blogRepository;

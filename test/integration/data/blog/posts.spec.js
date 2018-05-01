@@ -26,6 +26,14 @@ describe('When we want to keep track of blog posts', function () {
         done();
       });
     });
+    it('Can find blog posts by title', function (done) {
+      postsRepository.findByTitle(post.title).then(function (result) {
+        assert.equal(result.post_id, post.post_id);
+        assert.equal(result.title, post.title);
+        assert.equal(result.body, post.body);
+        done();        
+      });
+    });
     it('Can update blog posts', function (done) {
       post.body = "\nHow are you?\n\nOkay, thank you, goodbye.\n";
       postsRepository.saveChanges(post).then(function (rowsAffected) {
