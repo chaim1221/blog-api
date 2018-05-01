@@ -1,8 +1,11 @@
 <img src="https://travis-ci.com/images/logos/Tessa-pride-4.png" width=128 height=128 />  
+
 [![Build Status](https://travis-ci.org/chaim1221/blog-api.svg?branch=master)](https://travis-ci.org/chaim1221/blog-api)
 
 <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" width=128 height=128 />  
+
 [![GitHub version](https://badge.fury.io/gh/chaim1221%2Fblog-api.svg)](https://badge.fury.io/gh/chaim1221%2Fblog-api)
+
 
 TODO: Deployed URL
 
