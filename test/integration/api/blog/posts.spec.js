@@ -18,8 +18,13 @@ describe('When we want to interact with blog posts through a REST API,', functio
           response.should.have.status(200);
           response.body.should.be.an('array');
           response.body.length.should.equal(1);
-          console.log(response.body);
-          response.body[0].post_id.should.equal(1);
+
+          var post = new Post(response.body[0]);
+
+          post.post_id.should.equal(1);
+          post.title.should.equal('hai');
+          post.body.should.equal('hai');
+          
           done();
         });
     });

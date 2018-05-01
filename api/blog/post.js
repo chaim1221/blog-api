@@ -10,7 +10,7 @@ BlogPostController.prototype.defineRoutes = function(router) {
   router.route('/posts')
     .get(function (request, response) {
       var posts = postsRepository.findAll();
-      response.json([{ post_id: 1 }]);
+      response.json([{ post_id: 1, title: 'hai', body: 'hai' }]);
     });
 }
 
