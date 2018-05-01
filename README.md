@@ -59,7 +59,8 @@ az container create --resource-group nwea --name acr-quickstart --image blogapi.
 # and, here's a handy URL for you to point Postman at:
 az container show --resource-group nwea --name acr-quickstart --query ipAddress.fqdn
 ```
-
 That's it, you're deployed to Azure in production.
 
-I'd love to get this working with Travis CI, but there seems to be absolutely no support for that whatsoever. Even if you could get the image pushed to the container registry, those last five steps have no automation support from Azure that I can see. But I'll keep looking! :pray:
+Just to take the guesswork out of it, it's deployed to:   `nwea-blog-api.westus.azurecontainer.io`
+
+I'd love to get this working with Travis CI, but there seems to be no support for that. Even if I could get the image pushed to the container registry, those last five steps have no automation support from Azure that I can see. But I'll keep trying! :pray:
