@@ -8,7 +8,7 @@ function BlogPostController() { }
 BlogPostController.prototype.defineRoutes = function(router) {
   router.route('/posts')
     .get(function (request, response) {
-      response.json({ message: "200 OK" });
+      response.json([{ message: "200 OK" }]);
     });
 }
 
