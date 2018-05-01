@@ -4,6 +4,8 @@ var databaseTest = require('./data/db.js');
 
 var port = process.env.PORT || 8080;
 
+var BlogPostController = require('./api/blog/post.js');
+
 var app = express();
 var router = express.Router();
 
@@ -21,4 +23,7 @@ router.route('/')
     response.json({ message: '200 OK' });
 });
 
-module.exports = app
+var blogPostController = new BlogPostController();
+blogPostController.defineRoutes(router);
+
+module.exports = app;
