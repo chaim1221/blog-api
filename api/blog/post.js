@@ -17,11 +17,18 @@ BlogPostController.prototype.defineRoutes = function(router) {
         response.json(posts);
       });
     });
+  //
   router.route('/post')
     .post(function (request, response) {
       console.log(request.body);
-      response.status(201).json({ message: "201 CREATED" });
+      var post = new Post(request.body);
+      postsRepository.add(post).then(function (returnedValue) {
+        post.post_id = parseInt(returnedValue);
+        console.log(post.post_id);
+        response.status(201).json({ message: "201 CREATED" });
+      });
     });
+  //
 }
 
 module.exports = BlogPostController;
