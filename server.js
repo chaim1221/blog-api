@@ -20,3 +20,5 @@ router.route('/')
   .get(function(request, response) {
     response.json({ message: '200 OK' });
 });
+
+module.exports = app

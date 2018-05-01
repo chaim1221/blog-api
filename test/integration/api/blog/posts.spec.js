@@ -12,11 +12,11 @@ chai.use(chaiHttp);
 describe('When we want to interact with blog posts through a REST API,', function () {
   describe('the GET endpoint, /posts', function () {
     it('returns all existing blog posts.', function (done) {
-    //   chai.request(server)
-    //     .get('/posts')
-    //     .end(function (error, response) {
-    //         response.should.have.status(200);
-    //     });
+       chai.request(server)
+         .get('/posts')
+         .end(function (error, response) {
+             response.should.have.status(200);
+         });
       done();
     });
   });
