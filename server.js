@@ -18,12 +18,5 @@ router.use(function(request, response, next) {
 });
 router.route('/')
   .get(function(request, response) {
-    response.json({ message: 'test successful (200)' });
+    response.json({ message: '200 OK' });
 });
-
-// pre-seeded
-var getPost = databaseTest
-  .read("posts", "title", "hai")
-  .then(post => {
-    console.log(post);
-  });
