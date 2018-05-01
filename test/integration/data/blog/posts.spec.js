@@ -9,8 +9,12 @@ describe('When we want to keep track of blog posts', function () {
   }
 
   describe('Repository: PostsRepository', function () {
-    it('Is not null', function (){
-      assert.isNotNull(postsRepository);
+    it('Can add blog posts', function (done) {
+      postsRepository.add(post).then(function (returnedValue) {
+        assert.ok(returnedValue);
+        done();
+      });
+      //assert.isNotNull(postsRepository);
     });
   });
 });
