@@ -1,4 +1,4 @@
-TODO: Travis Build Status
+[![Build Status](https://travis-ci.org/chaim1221/blog-api.svg?branch=master)](https://travis-ci.org/chaim1221/blog-api)
 TODO: Deploy Status
 
 Blog API
