@@ -17,7 +17,10 @@ describe('When we want to interact with blog posts through a REST API,', functio
         .end(function (error, response) {
           response.should.have.status(200);
           response.body.should.be.an('array');
-          done();      
+          response.body.length.should.equal(1);
+          console.log(response.body);
+          response.body[0].post_id.should.equal(1);
+          done();
         });
     });
   });
