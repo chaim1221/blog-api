@@ -16,8 +16,12 @@ describe('When we want to keep track of blog posts', function () {
         console.log(post);
         done();
       });
-      
-      //assert.isNotNull(postsRepository);
+    });
+    it('Can remove blog posts', function () {
+      postsRepository.remove(post.id).then(function (rowsAffected) {
+        assert.isAbove(rowsAffected, 0);
+        done();
+      });
     });
   });
 });
