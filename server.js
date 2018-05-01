@@ -9,17 +9,17 @@ var router = express.Router();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-router.use(function(request, response, next) {
-    next();
-});
-router.get('/', function(request, response) {
-    response.json({ message: 'test successful (200)' });
-});
-
-app.use('/api', router);
+app.use('/', router);
 app.listen(port);
 console.log('Listening on port ' + port);
+
+router.use(function(request, response, next) {
+  next();
+});
+router.route('/')
+  .get(function(request, response) {
+    response.json({ message: 'test successful (200)' });
+});
 
 // should be undefined
 var getPost = databaseTest
