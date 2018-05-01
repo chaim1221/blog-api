@@ -17,10 +17,10 @@ April-May 2018, late at night.
 Because we like you.
 
 #### how
-`npm start` will get you started.
-`npm test` will get you tested.
-If you fire up Postman, `blog-api.postman_collection.json` will keep you posted.
-If you're into Docker, try
+`npm start` will get you started.  
+`npm test` will get you tested.  
+If you fire up Postman, `blog-api.postman_collection.json` will keep you posted.  
+If you're into Docker, try  
 ```
 docker build -t blogapi.azurecr.io/blog-api .
 docker run -d -p 8080:80 blog-api # works with Postman; 80:80 in prod
