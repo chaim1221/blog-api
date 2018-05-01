@@ -2,26 +2,26 @@
 
 <img src="https://i1.wp.com/buildazure.com/wp-content/uploads/2017/09/Azure.png?w=519&ssl=1" width=32 height=32 />  &nbsp;  [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://github.com/chaim1221/blog-api#deploying)
 
-#### Blog API
+### Blog API
 
-##### who
+#### who
 [Chaim Eliyah](https://github.com/chaim1221)
 
-##### what
+#### what
 This is a blog API in NodeJS deployed to AWS using Travis CI. It is being written as part of a coding challenge handed off by a recruiter.  
 
-##### when
+#### when
 April-May 2018, late at night.
 
-##### why
+#### why
 Because we like you.
 
-##### how
+#### how
 `npm start` will get you started.
 `npm test` will get you tested.
 If you fire up Postman, `blog-api.postman_collection.json` will keep you posted.
 
-##### deploying
+#### deploying
 Manually delete the container if it exists. Then:  
 ```
 brew update && brew install azure-cli
