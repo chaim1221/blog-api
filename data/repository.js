@@ -13,6 +13,10 @@ BlogRepository.prototype = {
     return db.read(//this.schema + '.' + 
                                          this.table, column, value);
   },
+  findAll: function () {
+    return db.readAll(//this.schema + '.' +
+                                            this.table);
+  },
   findById: function (id) {
     return db.readById(//this.schema + '.' +
                                              this.table, id);

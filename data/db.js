@@ -26,6 +26,13 @@ module.exports = {
                 throw new Error(error);
             })
     },
+    readAll: function(table) {
+        return knex(table)
+            .select('*')
+            .then(function(value) {
+                return value;
+            })
+    },
     readById: function(table, id) {
         return knex(table)
             .where({ post_id: parseInt(id) })

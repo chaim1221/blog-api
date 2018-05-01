@@ -18,6 +18,15 @@ describe('When we want to create, read, update, and delete blog posts,', functio
         done();
       });
     });
+    it('can find all the blog posts,', function (done) {
+      postsRepository.findAll().then(function (result) {
+        assert.equal(result.length, 2); //pre-seed contains one already
+        assert.equal(result[1].post_id, post.post_id);
+        assert.equal(result[1].title, post.title);
+        assert.equal(result[1].body, post.body);
+        done();
+      });
+    });
     it('can find blog posts by ID,', function (done) {
       postsRepository.findById(post.post_id).then(function (result) {
         assert.equal(result.post_id, post.post_id);

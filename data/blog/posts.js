@@ -1,7 +1,7 @@
 var BlogRepository = require('./../repository.js').Repository;
 var db = require('./../db.js');
 
-// pre-defined schema has `posts` so we're leaving it that way
+// pre-defined schema has table `posts`, so implement that
 function PostsRepository() {
   var blogRepository = new BlogRepository('blog', 'posts');
 

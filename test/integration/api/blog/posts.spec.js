@@ -15,9 +15,9 @@ describe('When we want to interact with blog posts through a REST API,', functio
        chai.request(server)
          .get('/posts')
          .end(function (error, response) {
-             response.should.have.status(200);
+           response.should.have.status(404);
+           done();      
          });
-      done();
     });
   });
 });
