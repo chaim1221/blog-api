@@ -4,5 +4,12 @@ node_js: "9"
 
 services: docker
 
-after_install:
-  - echo "Hi!"
+after_success:
+  - docker build -t blog-api .
+  - docker run -d -p 80:80 blog-api
+  - docker ps -a
+  - wget --retry-connrefused --waitretry=1 http://127.0.0.1:80
+
+#deploy:
+  # deploying via Azure CLI; don't have it working in Travis yet
+  # docker tag blog-api ndlon.azurecr.io/blog-api:v1
