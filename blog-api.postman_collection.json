@@ -47,10 +47,15 @@
 			"name": "POST /post",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  post_id: null,\n  title: 'My Adventures in Costa Rica',\n  body: 'Fui a Costa Rica para fumar y surfear.'\n}\n"
+					"raw": "{\n  \"post_id\": null,\n  \"title\": \"My Adventures in Costa Rica\",\n  \"body\": \"Fui a Costa Rica para fumar y surfear.\"\n}\n"
 				},
 				"url": {
 					"raw": "localhost:8080/post",
