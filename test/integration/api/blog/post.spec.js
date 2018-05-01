@@ -17,12 +17,19 @@ describe('When we want to interact with blog posts through a REST API,', functio
 
   describe('the POST endpoint, /post', function () {
     it('accepts a brand spankin\' new blog post', function (done) {
+      var post = new Post({
+        post_id: null,
+        title: "My Adventures in Costa Rica",
+        body: "Fui a Costa Rica para fumar y surfear."
+      });
       chai.request(server)
         .post('/post')
+        .send(post)
         .end(function (error, response) {
           if (error) console.error(error.message);
           
-          
+          response.should.have.status(201);
+
           done();
         });
     });
