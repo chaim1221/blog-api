@@ -5,7 +5,7 @@ var db = require('./../db.js');
 function PostsRepository() {
   var blogRepository = new BlogRepository('blog', 'posts');
 
-  blogRepository.getByTitle = function (title) {
+  blogRepository.findByTitle = function (title) {
     return blogRepository.find('posts', title);
   }
 

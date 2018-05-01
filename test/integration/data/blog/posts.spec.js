@@ -13,13 +13,21 @@ describe('When we want to keep track of blog posts', function () {
       postsRepository.add(post).then(function (returnedValue) {
         assert.ok(returnedValue);
         post.id = parseInt(returnedValue);
-        console.log(post);
+        console.log(post.id);
         done();
       });
     });
-    it('Can remove blog posts', function () {
+    it('Can find blog posts by ID', function (done) {
+      postsRepository.findById(post.id).then(function (result) {
+//        //assert.equal(result.id, post.id);
+//        assert.equal(result.title, post.title);
+//        assert.equal(result.body, post.body);
+        done();
+      });
+    });
+    it('Can remove blog posts', function (done) {
       postsRepository.remove(post.id).then(function (rowsAffected) {
-        assert.isAbove(rowsAffected, 0);
+        assert.equal(rowsAffected, 1);
         done();
       });
     });

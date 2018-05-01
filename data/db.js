@@ -7,10 +7,11 @@ var knex = require('knex')({
   useNullAsDefault: true
 });
 
+// seriously, why would they do this? sigh...TODO: fix name "post_id"; should be "id"
 module.exports = {
     create: function(table, data) {
         return knex(table)
-            .returning('id')
+// PG       .returning('id')
             .insert(data);
     },
     read: function(table, column, value) {
@@ -27,7 +28,7 @@ module.exports = {
     },
     readById: function(table, id) {
         return knex(table)
-            .where({ id: parseInt(id) })
+            .where({ post_id: parseInt(id) })
             .select('*')
             .then(function(value) {
                 return value[0];
@@ -35,16 +36,16 @@ module.exports = {
             .catch(function(error) {
                 throw new Error(error);
             })
-    },
+    }, 
     update: function(table, data) {
         return knex(table)
-            .where({ id: parseInt(data.id) })
-            .returning('id')
+            .where({ post_id: parseInt(data.id) })
+// PG       .returning('id')
             .update(data);
     },
     delete: function(table, id) {
         return knex(table)
-            .where({ id: parseInt(id) })
+            .where({ post_id: parseInt(id) })
             .del();
-    }  
+    }
 }
