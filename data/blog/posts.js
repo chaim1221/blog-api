@@ -11,4 +11,4 @@ function PostsRepository() {
   return blogRepository;
 }
 
-exports.Repository = EmployerProfileRepository;
+exports.Repository = PostsRepository;
