@@ -12,8 +12,11 @@ describe('When we want to keep track of blog posts', function () {
     it('Can add blog posts', function (done) {
       postsRepository.add(post).then(function (returnedValue) {
         assert.ok(returnedValue);
+        post.id = parseInt(returnedValue);
+        console.log(post);
         done();
       });
+      
       //assert.isNotNull(postsRepository);
     });
   });
