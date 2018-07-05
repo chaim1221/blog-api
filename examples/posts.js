@@ -2,7 +2,7 @@ const http = require('http');
 
 var displayUsage = function () {
   console.log("To get the title and body of every post by user id (for example) 7:\n");
-  console.log("$ node app.js id=7");
+  console.log("$ node posts.js id=7");
 }
 
 var httpRequest = function (options, reject, resolve, body) {
