@@ -7,7 +7,7 @@ var knex = require('knex')({
   useNullAsDefault: true
 });
 
-// seriously, why would they do this? sigh...TODO: fix name "post_id"; should be "id"
+// TODO: fix name "post_id"; should be "id"
 module.exports = {
     create: function(table, data) {
         return knex(table)
